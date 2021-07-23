@@ -16,6 +16,7 @@ public abstract class BaseTests {
     public HomePage homePage;
     public AuthenticationPage authenticationPage;
     public MyAccountPage myAccountPage;
+
     @Before
     public void setup(){
         System.setProperty("webdriver.chrome.driver", "src/test/resources/driver/chromedriver.exe");
@@ -28,6 +29,6 @@ public abstract class BaseTests {
     }
     @After
     public void finish(){
-        //driver.quit();
+        driver.quit();
     }
 }
