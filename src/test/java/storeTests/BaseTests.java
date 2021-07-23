@@ -5,10 +5,7 @@ import org.junit.Before;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.PageFactory;
-import pageObjects.AccountCreationPage;
-import pageObjects.AuthenticationPage;
-import pageObjects.HomePage;
-import pageObjects.MyAccountPage;
+import pageObjects.*;
 
 import java.util.Random;
 import java.util.concurrent.TimeUnit;
@@ -19,6 +16,8 @@ public abstract class BaseTests {
     public AuthenticationPage authenticationPage;
     public MyAccountPage myAccountPage;
     public AccountCreationPage accountCreationPage;
+    public CheckoutPage checkoutPage;
+
     @Before
     public void setup(){
         System.setProperty("webdriver.chrome.driver", "src/test/resources/driver/chromedriver.exe");
@@ -29,6 +28,7 @@ public abstract class BaseTests {
         authenticationPage = PageFactory.initElements(driver, AuthenticationPage.class);
         myAccountPage = PageFactory.initElements(driver, MyAccountPage.class);
         accountCreationPage = PageFactory.initElements(driver, AccountCreationPage.class);
+        checkoutPage = PageFactory.initElements(driver,CheckoutPage.class);
     }
     @After
     public void finish(){
