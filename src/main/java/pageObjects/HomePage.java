@@ -16,6 +16,8 @@ public class HomePage {
     private WebElement addProductToCartButton;
     @FindBy(xpath="//a[@title=\"Proceed to checkout\"]")
     private WebElement proceedToCheckoutButton;
+    @FindBy(xpath = "//a[@title=\"Contact Us\"]")
+    private WebElement contactButton;
 
     public HomePage(WebDriver driver) {
         this.driver = driver;
@@ -24,6 +26,9 @@ public class HomePage {
 
     public void clickLoginButton(){
         loginButton.click();
+    }
+    public void clickContactButton() {
+        contactButton.click();
     }
     public void clickAddProductButton(){
         Actions actionBuilder = new Actions(driver);

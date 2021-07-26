@@ -19,6 +19,7 @@ public abstract class BaseTests {
     public CheckoutPage checkoutPage;
     public MyWishListsPage wishListsPage;
     public OrderHistoryPage orderHistoryPage;
+    public ContactPage contactPage;
 
     @Before
     public void setup(){
@@ -33,7 +34,7 @@ public abstract class BaseTests {
         checkoutPage = PageFactory.initElements(driver,CheckoutPage.class);
         wishListsPage = PageFactory.initElements(driver,MyWishListsPage.class);
         orderHistoryPage = PageFactory.initElements(driver,OrderHistoryPage.class);
-
+        contactPage = PageFactory.initElements(driver,ContactPage.class);
     }
     @After
     public void finish(){
