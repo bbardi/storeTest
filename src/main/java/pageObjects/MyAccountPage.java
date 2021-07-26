@@ -10,6 +10,8 @@ public class MyAccountPage {
     private WebElement welcomeMessage;
     @FindBy(xpath="//*[@title=\"My wishlists\"]")
     private WebElement wishListButton;
+    @FindBy(xpath = "//*[@title=\"Orders\"]")
+    private WebElement orderHistoryButton;
 
     public MyAccountPage(WebDriver driver) {
         this.driver = driver;
@@ -19,5 +21,8 @@ public class MyAccountPage {
     }
     public void clickWishListButton() {
         wishListButton.click();
+    }
+    public void clickOrderHistoryButton() {
+        orderHistoryButton.click();
     }
 }
