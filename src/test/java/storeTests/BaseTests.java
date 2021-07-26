@@ -17,6 +17,7 @@ public abstract class BaseTests {
     public MyAccountPage myAccountPage;
     public AccountCreationPage accountCreationPage;
     public CheckoutPage checkoutPage;
+    public MyWishListsPage wishListsPage;
 
     @Before
     public void setup(){
@@ -29,6 +30,7 @@ public abstract class BaseTests {
         myAccountPage = PageFactory.initElements(driver, MyAccountPage.class);
         accountCreationPage = PageFactory.initElements(driver, AccountCreationPage.class);
         checkoutPage = PageFactory.initElements(driver,CheckoutPage.class);
+        wishListsPage = PageFactory.initElements(driver,MyWishListsPage.class);
     }
     @After
     public void finish(){
