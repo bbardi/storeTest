@@ -24,6 +24,8 @@ public class HomePage {
     private WebElement firstProductLink;
     @FindBy(xpath = "//a[@title=\"View my customer account\"]")
     private WebElement accountButton;
+    @FindBy(xpath = "//*[@class=\"account\"]/span")
+    private WebElement fullName;
 
     public HomePage(WebDriver driver) {
         this.driver = driver;
@@ -52,5 +54,8 @@ public class HomePage {
     }
     public void clickAccountButton(){
         accountButton.click();
+    }
+    public String getFullName(){
+        return fullName.getText();
     }
 }

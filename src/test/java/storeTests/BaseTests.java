@@ -21,6 +21,8 @@ public abstract class BaseTests {
     public OrderHistoryPage orderHistoryPage;
     public ContactPage contactPage;
     public ProductPage productPage;
+    public PersonalInformationPage personalInformationPage;
+
     @Before
     public void setup(){
         System.setProperty("webdriver.chrome.driver", "src/test/resources/driver/chromedriver.exe");
@@ -36,6 +38,7 @@ public abstract class BaseTests {
         orderHistoryPage = PageFactory.initElements(driver,OrderHistoryPage.class);
         contactPage = PageFactory.initElements(driver,ContactPage.class);
         productPage = PageFactory.initElements(driver,ProductPage.class);
+        personalInformationPage = PageFactory.initElements(driver,PersonalInformationPage.class);
     }
     @After
     public void finish(){

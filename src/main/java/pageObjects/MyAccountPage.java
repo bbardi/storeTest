@@ -12,6 +12,8 @@ public class MyAccountPage {
     private WebElement wishListButton;
     @FindBy(xpath = "//*[@title=\"Orders\"]")
     private WebElement orderHistoryButton;
+    @FindBy(xpath = "//*[@title=\"Information\"]")
+    private WebElement editAccountInfoButton;
 
     public MyAccountPage(WebDriver driver) {
         this.driver = driver;
@@ -24,5 +26,8 @@ public class MyAccountPage {
     }
     public void clickOrderHistoryButton() {
         orderHistoryButton.click();
+    }
+    public void clickEditAccountInfoButton() {
+        editAccountInfoButton.click();
     }
 }
