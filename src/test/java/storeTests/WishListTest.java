@@ -3,6 +3,7 @@ package storeTests;
 import org.junit.Assert;
 import org.junit.Test;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import util.RandomGenerators;
 
 public class WishListTest extends BaseTests {
     @Test
@@ -12,7 +13,7 @@ public class WishListTest extends BaseTests {
         authenticationPage.enterPassword("testing123");
         authenticationPage.clickLogin();
         myAccountPage.clickWishListButton();
-        String wishlistName = generateRandomString(10);
+        String wishlistName = RandomGenerators.generateRandomString(10);
         wishListsPage.sendWishListName(wishlistName);
         wishListsPage.clickSubmitWishListButton();
         Assert.assertTrue(wishListsPage.wishListExists(wishlistName));
@@ -26,7 +27,7 @@ public class WishListTest extends BaseTests {
         authenticationPage.enterPassword("testing123");
         authenticationPage.clickLogin();
         myAccountPage.clickWishListButton();
-        String wishlistName = generateRandomString(10);
+        String wishlistName = RandomGenerators.generateRandomString(10);
         wishListsPage.sendWishListName(wishlistName);
         wishListsPage.clickSubmitWishListButton();
         Assert.assertTrue(wishListsPage.wishListExists(wishlistName));
@@ -42,7 +43,7 @@ public class WishListTest extends BaseTests {
         authenticationPage.enterPassword("testing123");
         authenticationPage.clickLogin();
         myAccountPage.clickWishListButton();
-        String wishlistName = generateRandomString(10);
+        String wishlistName = RandomGenerators.generateRandomString(10);
         wishListsPage.sendWishListName(wishlistName);
         wishListsPage.clickSubmitWishListButton();
         homePage.clickSiteLogo();
