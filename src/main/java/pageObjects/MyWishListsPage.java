@@ -17,6 +17,8 @@ public class MyWishListsPage {
     private List<WebElement> wishListNames;
     @FindBy(xpath="//*[@id=\"block-history\"]/table/tbody/tr/*[@class=\"wishlist_delete\"]/a")
     private List<WebElement> wishListDeleteButtons;
+    @FindBy(xpath = "//*[@id=\"block-history\"]/table/tbody/tr/td[2]")
+    private List<WebElement> quantityList;
 
     public MyWishListsPage(WebDriver driver) {
         this.driver = driver;
@@ -45,5 +47,15 @@ public class MyWishListsPage {
     }
     public void confirmDeletion(){
         driver.switchTo().alert().accept();
+    }
+    public String getQuantity(String wishlistName){
+        int i = 0;
+        for(WebElement el : wishListNames){
+            if(wishlistName.equals(el.getText())){
+                break;
+            }
+            i++;
+        }
+        return quantityList.get(i).getText();
     }
 }

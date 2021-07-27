@@ -20,7 +20,7 @@ public abstract class BaseTests {
     public MyWishListsPage wishListsPage;
     public OrderHistoryPage orderHistoryPage;
     public ContactPage contactPage;
-
+    public ProductPage productPage;
     @Before
     public void setup(){
         System.setProperty("webdriver.chrome.driver", "src/test/resources/driver/chromedriver.exe");
@@ -35,6 +35,7 @@ public abstract class BaseTests {
         wishListsPage = PageFactory.initElements(driver,MyWishListsPage.class);
         orderHistoryPage = PageFactory.initElements(driver,OrderHistoryPage.class);
         contactPage = PageFactory.initElements(driver,ContactPage.class);
+        productPage = PageFactory.initElements(driver,ProductPage.class);
     }
     @After
     public void finish(){

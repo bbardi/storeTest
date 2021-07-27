@@ -18,6 +18,12 @@ public class HomePage {
     private WebElement proceedToCheckoutButton;
     @FindBy(xpath = "//a[@title=\"Contact Us\"]")
     private WebElement contactButton;
+    @FindBy(xpath = "//a[@title=\"My Store\"]")
+    private WebElement siteLogo;
+    @FindBy(xpath = "//*[@id=\"homefeatured\"]/li[1]/div/div[2]/h5/a")
+    private WebElement firstProductLink;
+    @FindBy(xpath = "//a[@title=\"View my customer account\"]")
+    private WebElement accountButton;
 
     public HomePage(WebDriver driver) {
         this.driver = driver;
@@ -37,5 +43,14 @@ public class HomePage {
     }
     public void clickCheckoutButton(){
         proceedToCheckoutButton.click();
+    }
+    public void clickSiteLogo(){
+        siteLogo.click();
+    }
+    public void clickFirstProductLink(){
+        firstProductLink.click();
+    }
+    public void clickAccountButton(){
+        accountButton.click();
     }
 }
