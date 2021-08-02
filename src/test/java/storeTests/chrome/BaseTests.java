@@ -1,4 +1,4 @@
-package storeTests;
+package storeTests.chrome;
 
 import org.junit.After;
 import org.junit.Before;

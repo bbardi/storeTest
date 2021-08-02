@@ -1,10 +1,10 @@
-package storeTests;
+package storeTests.firefox;
 
 import org.junit.Assert;
 import org.junit.Test;
 import util.RandomGenerators;
 
-public class PersonalInfoTests extends BaseTests{
+public class PersonalInfoTests extends BaseTests {
     @Test
     public void changeName(){
         String newFirstName = RandomGenerators.generateRandomString(5);

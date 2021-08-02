@@ -1,10 +1,10 @@
-package storeTests;
+package storeTests.firefox;
 
 import org.junit.Assert;
 import org.junit.Test;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-public class OrderPageTest extends BaseTests{
+public class OrderPageTest extends BaseTests {
     @Test
     public void canSeeOrderInformation(){
         homePage.clickLoginButton();
@@ -13,6 +13,7 @@ public class OrderPageTest extends BaseTests{
         authenticationPage.clickLogin();
         myAccountPage.clickOrderHistoryButton();
         orderHistoryPage.clickFirstOrderLink();
+        new WebDriverWait(driver,5).until(e->!orderHistoryPage.getSendMessageText().isEmpty());
         Assert.assertEquals("If you would like to add a comment about your order, please write it in the field below.",orderHistoryPage.getSendMessageText());
     }
     @Test

@@ -1,10 +1,10 @@
-package storeTests;
+package storeTests.firefox;
 
 import org.junit.Assert;
 import org.junit.Test;
 import util.RandomGenerators;
 
-public class ContactTest extends BaseTests{
+public class ContactTest extends BaseTests {
     @Test
     public void sendMessage(){
         homePage.clickContactButton();
